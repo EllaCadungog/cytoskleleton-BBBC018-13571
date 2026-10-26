@@ -2,11 +2,12 @@
 
 ## Measurement Results ##
 
-Measurement| Mean Value
-Cell area| 3143.4 pixels²
-Circularity| 0.58
-Aspect ratio| 1.653
-Actin fluorescence intensity| 370.9468 AU
+| Measurement | Mean Value |
+|---|---:|
+| Cell area | 3143.4 pixels² |
+| Circularity | 0.58 |
+| Aspect ratio | 1.653 |
+| Actin fluorescence intensity | 370.9468 AU |
 
 The five measured cells had an average area of 3143.4 pixels², indicating differences in cell size within the selected image field. The mean circularity of 0.58 and aspect ratio of 1.653 suggest that the cells had irregular and somewhat elongated shapes rather than being completely rounded. Meanwhile, the average F-actin fluorescence intensity of 370.9468 AU represents the overall mean actin staining signal of the five measured cells.
 
