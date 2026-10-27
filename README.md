@@ -1,46 +1,132 @@
-## Image Analysis of Cytoskeleton: Angular Cell Edges ## 
 
-## Measurement Results ##
+# Cytoskeleton and Cell Morphology Analysis (BBBC018)
 
-| Measurement | Mean Value |
-|---|---:|
-| Cell area | 3143.4 pixels² |
-| Circularity | 0.58 |
-| Aspect ratio | 1.653 |
-| Actin fluorescence intensity | 370.9468 AU |
+Karp Chapter 9: The Cytoskeleton and Cell Motility
 
-The five measured cells had an average area of 3143.4 pixels², indicating differences in cell size within the selected image field. The mean circularity of 0.58 and aspect ratio of 1.653 suggest that the cells had irregular and somewhat elongated shapes rather than being completely rounded. Meanwhile, the average F-actin fluorescence intensity of 370.9468 AU represents the overall mean actin staining signal of the five measured cells.
+**Student ID:** 202400718  
+**Dataset:** BBBC018 – Human HT29 Colon-Cancer Cells  
+**Selected Phenotype:** Angular cell edges  
+**Image ID:** 13571  
+**Actin Filename:** 13571-actin.DIB
 
-## Guide Questions ##
 
-1. Which specific phenotype did you choose, and what visible features support that choice?
+## Introduction ##
 
-Angular cell edges was my chosen phenotype. In the fluorescence image, the cells showed irregular outlines with noticeable angular edges rather than smooth, rounded boundaries. These visible features were consistent with the selected phenotype, as the cell borders appeared uneven and had distinct changes in direction.
+The cytoskeleton plays an important role in maintaining cell shape, providing structural support, and allowing cells to change their morphology. In this activity, fluorescence images of HT29 human colon-cancer cells from the BBBC018 dataset were examined to observe F-actin distribution and cell shape.
 
-2. Were your five cells mostly round or elongated? Refer to your circularity and aspect-ratio results.
+The selected phenotype was Angular cell edges. Five cells were measured using Fiji, and their measurements were analyzed in RStudio to compare cell area, circularity, aspect ratio, and mean actin fluorescence intensity.
 
-The five cells showed irregular shapes with some elongation, based on their average circularity of 0.58 and aspect ratio of 1.653. Since the circularity value was lower than 1 and the aspect ratio was greater than 1, the cells were not perfectly round. These measurements supported the observation that the cells had varied shapes and angular boundaries.
+---
 
-3. What role does actin play in maintaining cell shape and in cell movement (Karp Chapter 9)?
+## Dataset and Selected Images ##
 
-Actin is a major component of the cytoskeleton that provides structural support and helps maintain the shape of a cell. It also contributes to cell movement by forming structures such as lamellipodia and filopodia, which allow cells to extend their membranes. Through the continuous assembly and disassembly of actin filaments, cells can change their shape, maintain their boundaries, and move.
+The fluorescence images were obtained from the Broad Bioimage Benchmark Collection (BBBC018).
 
-4. Why can a single fixed fluorescence image NOT show how fast a cell moves?
+- Dataset: BBBC018
+- Phenotype: Angular cell edges
+- Image ID: 13571
+- Actin filename: 13571-actin.DIB
 
-A single fixed fluorescence image only captures the cell's structure at one point in time. Since it does not show changes in the cell's position over time, its movement speed cannot be determined. Observing cell movement requires images taken at different time points.
+The actin channel was used to examine F-actin staining and identify cell boundaries. F-actin is part of the cytoskeleton and contributes to cell shape, mechanical support, and cellular movement.
+
+---
+
+## Methods ##
+
+### Fiji Analysis 
+
+- The actin fluorescence image `13571-actin.DIB` was opened in Fiji using Bio-Formats.
+- The cell outlines were examined, and five cells were selected for measurement.
+- Area, Mean gray value, Shape descriptors, and Display label were enabled under Set Measurements.
+- The Freehand Selection tool was used to trace each selected cell, and the selections were added to ROI Manager.
+- All five cells were measured, and the measurements were saved as `data/fiji_results.csv`.
+- The annotated fluorescence image showing the five measured cells was saved as `figures/measured_cells.png`.
+
+### R Analysis
+
+- The Fiji measurements were imported into RStudio using an R script.
+- The measurements were analyzed to examine cell area, circularity, aspect ratio, and mean actin fluorescence intensity.
+- Mean values were calculated to summarize the five selected cells.
+- A scatter plot was generated to examine the relationship between cell area and circularity.
+- A graph was generated to compare the mean actin fluorescence intensity of the five measured cells.
+- The figures were saved in the `figures/` folder.
+
+---
+
+## Results ##
+
+The following figures present the results of the cell morphology analysis using Fiji and RStudio. Five HT29 cells from image ID 13571 were examined to determine their cell area, circularity, aspect ratio, and mean F-actin fluorescence intensity.
+
+### Five Measured HT29 Cells
+
+The actin fluorescence image was opened in Fiji, where five cells were selected and traced using the Freehand Selection tool. Each cell outline was added to ROI Manager, and the Show All and Labels options were used to display the selected cells. The annotated image was saved for documentation.
+
+**Figure 1. Measured HT29 Cells**
+
+*Description: F-actin fluorescence image of HT29 human colon-cancer cells from the BBBC018 dataset, image ID 13571, showing the five selected cells used for cell morphology analysis in Fiji.*
+
+[View Figure 1 (Measured Cells)](figures/measured_cells.png)
+
+### Cell Area versus Circularity
+
+Using the measurements obtained from Fiji, a scatter plot was generated in RStudio to examine the relationship between cell area and circularity among the five selected cells.
+
+**Figure 2. Cell Area versus Circularity**
+
+*Description: Scatter plot showing the relationship between cell area and circularity among the five measured HT29 cells displaying the Angular cell edges phenotype from image ID 13571.*
+
+[View Figure 2 (Cell Area versus Circularity)](figures/area_vs_circularity.png)
+
+The measured cell areas ranged from 1,586 to 4,404 pixels². Cell 2 had the largest area, while Cell 1 had the smallest area. Circularity values ranged from 0.426 to 0.832, with a mean circularity of approximately 0.580. These differences indicate variation in the shapes of the selected cells.
+
+### Actin Fluorescence Intensity
+
+The mean actin fluorescence intensity of the five measured cells was compared to examine differences in F-actin signal.
+
+**Figure 3. Actin Fluorescence Intensity**
+
+*Description: Graph comparing the mean F-actin fluorescence intensity of five measured HT29 cells from image ID 13571, representing the Angular cell edges phenotype.*
+
+[View Figure 3 (Actin Fluorescence Intensity)](figures/actin_intensity.png)
+
+The mean actin fluorescence intensity across the five cells was approximately 370.947. Cell 1 had the highest mean intensity at 425.834, while Cell 2 had the lowest at 301.647. These differences indicate variation in the measured actin fluorescence signal among the selected cells.
+
+---
+
+## Cell Morphology Summary ##
+
+The measurements obtained from Fiji were summarized to compare the morphological characteristics of the five selected HT29 cells.
+
+| Phenotype | Image ID | Cells Measured | Mean Area (px²) | Mean Circularity | Mean Aspect Ratio | Mean Actin Signal |
+|---|---:|---:|---:|---:|---:|---:|
+| Angular cell edges | 13571 | 5 | 3143.4 | 0.580 | 1.653 | 370.947 |
+
+The mean cell area was 3,143.4 pixels², and the mean aspect ratio was approximately 1.653. The mean circularity of 0.580 indicates that the measured cells varied in how closely their shapes resembled circles. The average actin signal was approximately 370.947.
+
+---
+
+## Interpretation ##
+
+The cell morphology analysis showed differences in the size, shape, and F-actin fluorescence intensity of the five selected HT29 cells. Cell area varied considerably, indicating that the selected cells differed in size. Circularity also varied, suggesting differences in cell shape. The aspect ratio provided additional information about cell elongation, while mean actin fluorescence intensity showed differences in the measured F-actin signal.
+
+These findings are relevant to the study of the cytoskeleton because actin filaments help maintain cell shape and support changes in cell morphology. However, the measurements describe only five selected cells from one image field. Therefore, the results cannot establish that all cells displaying the Angular cell edges phenotype have the same characteristics.
+
+---
 
 ## Conclusion ##
 
-The analysis of five HT29 cells from image 13571 showed that the selected cells had irregular shapes and angular edges, with differences in cell size and F-actin fluorescence intensity. Their mean circularity of 0.58 and aspect ratio of 1.653 supported the observation that the cells were not completely rounded and showed some elongation. Taken together, the activity demonstrated how fluorescence microscopy, Fiji, and R can be used to examine cell morphology and actin organization.
+This activity demonstrated how Fiji and RStudio can be used to analyze cell morphology and F-actin fluorescence in HT29 human colon-cancer cells. Five cells from BBBC018 image ID 13571 were measured to compare cell area, circularity, aspect ratio, and mean actin fluorescence intensity.
 
-## References and Data Sources ##
+The results showed variation in cell size, shape, and actin fluorescence signal among the selected cells. This activity provided practical experience in using image-analysis software to quantify cellular characteristics and understand the relationship between the cytoskeleton and cell morphology.
 
-Broad Bioimage Benchmark Collection. (n.d.). BBBC018: Human HT29 colon-cancer cells (diverse phenotypes). Broad Institute. https://bbbc.broadinstitute.org/BBBC018
+---
 
-Ljosa, V., Sokolnicki, K. L., & Carpenter, A. E. (2012). Annotated high-throughput microscopy image sets for validation. Nature Methods, 9(7), 637. https://doi.org/10.1038/nmeth.2083
 
-## Data Credit and Image License ## 
+## References ##
 
-Data Credit: We used image set BBBC018v1 from the Broad Bioimage Benchmark Collection (Ljosa et al., Nature Methods, 2012).
+Broad Institute. (n.d.). *Broad Bioimage Benchmark Collection (BBBC).* https://bbbc.broadinstitute.org/
 
-Image License: Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (CC BY-NC-SA 3.0).
+Schneider, C. A., Rasband, W. S., & Eliceiri, K. W. (2012). NIH Image to ImageJ: 25 years of image analysis. *Nature Methods, 9*, 671–675. https://doi.org/10.1038/nmeth.2089
+
+R Core Team. (n.d.). *R: A language and environment for statistical computing.* https://www.r-project.org/
+```
