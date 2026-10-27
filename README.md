@@ -59,13 +59,14 @@ The following figures present the results of the cell morphology analysis using 
 
 ### Five Measured HT29 Cells
 
-The actin fluorescence image was opened in Fiji, where five cells were selected and traced using the Freehand Selection tool. Each cell outline was added to ROI Manager, and the Show All and Labels options were used to display the selected cells. The annotated image was saved for documentation.
+The actin fluorescence image was opened in Fiji, where five cells were selected and traced using the Freehand Selection tool. Each cell outline was added to ROI Manager, and the Show All and Labels options were used to display the selected cells.
 
 **Figure 1. Measured HT29 Cells**
 
 *Description: F-actin fluorescence image of HT29 human colon-cancer cells from the BBBC018 dataset, image ID 13571, showing the five selected cells used for cell morphology analysis in Fiji.*
 
-[View Figure 1 (Measured Cells)](figures/measured_cells.png)
+[View Figure 1 (Measured Cells)](figures/measured__cells.png)
+
 
 ### Cell Area versus Circularity
 
