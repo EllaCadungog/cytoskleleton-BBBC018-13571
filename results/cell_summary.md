@@ -1,0 +1,4 @@
+
+| Phenotype | Image ID | Cells Measured | Mean Area (px²) | Mean Circularity | Mean Aspect Ratio | Mean Actin Signal |
+|---|---:|---:|---:|---:|---:|---:|
+| Angular cell edges | 13571 | 5 | 3143.4 | 0.58 | 1.653 | 370.9468 |
