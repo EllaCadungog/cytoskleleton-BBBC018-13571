@@ -57,30 +57,39 @@ The actin channel was used to examine F-actin staining and identify cell boundar
 
 The following figures present the results of the cell morphology analysis using Fiji and RStudio. Five HT29 cells from image ID 13571 were examined to determine their cell area, circularity, aspect ratio, and mean F-actin fluorescence intensity.
 
-### Five Measured HT29 Cells
-
-The actin fluorescence image was opened in Fiji, where five cells were selected and traced using the Freehand Selection tool. Each cell outline was added to ROI Manager, and the Show All and Labels options were used to display the selected cells.
-
-**Figure 1. Measured HT29 Cells**
-
-*Description: F-actin fluorescence image of HT29 human colon-cancer cells from the BBBC018 dataset, image ID 13571, showing the five selected cells used for cell morphology analysis in Fiji.*
-
-[View Figure 1 (Measured Cells)](figures/measured__cells.png)
 
 
-### Cell Area versus Circularity
+## Five Measured HT29 Cells
 
-Using the measurements obtained from Fiji, a scatter plot was generated in RStudio to examine the relationship between cell area and circularity among the five selected cells.
+The actin fluorescence image was opened in Fiji, where five cells were selected and traced using the Freehand Selection tool. Each cell outline was added to the ROI Manager, and the **Show All** and **Labels** options were enabled to display the selected cells with their corresponding labels.
+
+**Figure 1. Five Measured HT29 Cells**
+
+*Description: F-actin fluorescence image of HT29 human colon cancer cells from the BBBC018 dataset (Image ID: 13571), showing the five selected cells used for morphological analysis in Fiji. Each selected cell is labeled for identification.*
+
+[View Figure 1: Five Measured HT29 Cells](https://github.com/EllaCadungog/cytoskleleton-BBBC018-13571/blob/main/figures/measured__cells.png)
+
+The image shows five HT29 cells selected for morphological analysis. The cells display differences in their size and shape, with some showing more angular or irregular boundaries. These visible differences are consistent with the Angular cell edges phenotype. The selected cells were used to measure cell area, circularity, and actin fluorescence intensity to quantify their morphological characteristics.
+
+---
+
+## Cell Area versus Circularity
+
+The measurements obtained from Fiji were analyzed in RStudio. A scatter plot was generated to examine the relationship between cell area and circularity among the five selected cells.
 
 **Figure 2. Cell Area versus Circularity**
 
-*Description: Scatter plot showing the relationship between cell area and circularity among the five measured HT29 cells displaying the Angular cell edges phenotype from image ID 13571.*
+*Description: Scatter plot illustrating the relationship between cell area and circularity among five measured HT29 cells displaying the Angular cell edges phenotype from image ID 13571.*
 
-[View Figure 2 (Cell Area versus Circularity)](figures/area_vs_circularity.png)
+[View Figure 2: Cell Area versus Circularity](https://github.com/EllaCadungog/cytoskleleton-BBBC018-13571/blob/main/figures/area_vs_circularity.png)
 
-The measured cell areas ranged from 1,586 to 4,404 pixels². Cell 2 had the largest area, while Cell 1 had the smallest area. Circularity values ranged from 0.426 to 0.832, with a mean circularity of approximately 0.580. These differences indicate variation in the shapes of the selected cells.
+The measured cell areas ranged from 1,586 to 4,404 pixels². Cell 2 had the largest area, while Cell 1 had the smallest area. Circularity values ranged from 0.426 to 0.832, with a mean circularity of approximately 0.580.
 
-### Actin Fluorescence Intensity
+The differences in cell area indicate that the selected HT29 cells varied in size. The circularity values also showed variation in cell shape. Cells with lower circularity values had outlines that were less similar to a perfect circle, while higher values indicated more rounded shapes. These findings suggest that the selected cells exhibited differences in their morphology, which is consistent with the Angular cell edges phenotype.
+
+---
+
+## Actin Fluorescence Intensity
 
 The mean actin fluorescence intensity of the five measured cells was compared to examine differences in F-actin signal.
 
@@ -88,11 +97,17 @@ The mean actin fluorescence intensity of the five measured cells was compared to
 
 *Description: Graph comparing the mean F-actin fluorescence intensity of five measured HT29 cells from image ID 13571, representing the Angular cell edges phenotype.*
 
-[View Figure 3 (Actin Fluorescence Intensity)](figures/actin_intensity.png)
+[View Figure 3: Actin Fluorescence Intensity](https://github.com/EllaCadungog/cytoskleleton-BBBC018-13571/blob/main/figures/actin_intensity.png)
 
-The mean actin fluorescence intensity across the five cells was approximately 370.947. Cell 1 had the highest mean intensity at 425.834, while Cell 2 had the lowest at 301.647. These differences indicate variation in the measured actin fluorescence signal among the selected cells.
+The mean actin fluorescence intensity across the five cells was approximately 370.947. Cell 1 had the highest mean intensity at 425.834, while Cell 2 had the lowest at 301.647.
+
+The differences in mean actin fluorescence intensity indicate variation in the detected F-actin signal among the five HT29 cells. Cell 1 showed the highest fluorescence intensity, while Cell 2 showed the lowest. Since actin is an important component of the cytoskeleton, these differences may reflect variations in the distribution or abundance of F-actin within the selected cells. However, fluorescence intensity alone cannot determine the exact organization of the actin cytoskeleton or explain the cause of the angular cell edges.
 
 ---
+
+## Overall Interpretation
+
+The morphological analysis of five HT29 cells revealed variations in cell area, circularity, and actin fluorescence intensity. The differences in cell size and shape indicate that the selected cells did not have identical morphological characteristics. The circularity measurements and fluorescence intensity values further demonstrate variation among the cells. Overall, the findings are consistent with the Angular cell edges phenotype and show how Fiji and RStudio can be used to quantify cell morphology and F-actin fluorescence in HT29 human colon cancer cells.
 
 ## Cell Morphology Summary ##
 
