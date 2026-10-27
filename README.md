@@ -109,8 +109,7 @@ The morphological analysis of five HT29 cells revealed variations in cell area, 
 
 ## Cell Morphology Summary ##
 
-The measurements obtained from Fiji were summarized to compare the morphological characteristics of the five selected HT29 cells.
-
+**Table 1.** The measurements obtained from Fiji were summarized to compare the morphological characteristics of the five selected HT29 cells.
 | Phenotype | Image ID | Cells Measured | Mean Area (px²) | Mean Circularity | Mean Aspect Ratio | Mean Actin Signal |
 |---|---:|---:|---:|---:|---:|---:|
 | Angular cell edges | 13571 | 5 | 3143.4 | 0.580 | 1.653 | 370.947 |
